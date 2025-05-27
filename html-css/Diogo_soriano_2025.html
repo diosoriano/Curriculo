@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diogo Augusto Amaral Soriano</title>
+
+  <style>
+    :root {
+      --primary: #0f172a;
+      --secondary: #2563eb;
+      --bg: #f4f6f8;
+      --text: #333;
+      --text-light: #cbd5e1;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--primary);
+      color: #f8fafc;
+      padding: 05px 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .profile img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--secondary);
+    }
+
+    .profile-info h1 {
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+
+    .profile-info p {
+      font-size: 13px;
+      color: var(--text-light);
+      max-width: 350px;
+    }
+
+    nav {
+      display: flex;
+      gap: 12px;
+    }
+
+    nav a {
+      background-color: #1e293b;
+      color: #f8fafc;
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: background-color 0.5s, transform 0.4s;
+    }
+
+    nav a:hover {
+      background-color: var(--secondary);
+      transform: translateY(-2px);
+    }
+
+    /* MAIN */
+    main {
+      padding: 130px 40px 60px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    section {
+      margin-bottom: 60px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    section h2 {
+      font-size: 26px;
+      margin-bottom: 15px;
+      color: var(--primary);
+      border-bottom: 2px solid var(--secondary);
+      padding-bottom: 5px;
+    }
+
+    section p, section ul, section li {
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    ul {
+      list-style: inside disc;
+      margin-top: 10px;
+    }
+
+    /* FORMATTING FOR CURRICULUM SECTIONS */
+    .info-adicional,
+    .formacao,
+    .qualificacoes,
+    .experiencia,
+    .cursos {
+      background-color: white;
+      padding: 20px 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .info-adicional p,
+    .formacao li,
+    .qualificacoes li,
+    .experiencia li,
+    .cursos li {
+      margin-bottom: 8px;
+    }
+
+    .experiencia .job {
+      margin-bottom: 15px;
+    }
+
+    .experiencia .job h3 {
+      font-weight: 700;
+      color: var(--secondary);
+      font-size: 18px;
+    }
+
+    .experiencia .job span {
+      font-style: italic;
+      font-size: 14px;
+      color: gray;
+    }
+
+    /* CONTATO */
+    .contact-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .contact-buttons a {
+      background-color: #25d366;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-align: center;
+      transition: background-color 0.5s, transform 0.4s;
+    }
+
+    .contact-buttons a:hover {
+      background-color: #1ebe57;
+      transform: scale(1.05);
+    }
+
+    /* FOOTER */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--primary);
+      color: var(--text-light);
+      padding: 05px 10px;
+      text-align: center;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+    }
+
+    footer p {
+      font-size: 13px;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      nav {
+        align-self: center;
+      }
+      main {
+        padding: 140px 20px 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  
+
+  <header>
+    <div class="profile">
+      <img src="./img/Eu.jpeg" alt="Foto de Diogo Augusto Amaral Soriano" />
+      <div class="profile-info">
+        <h1>Diogo Augusto Amaral Soriano</h1>
+        <p>Financeiro | Fiscal | Tributário | Processos</p>
+      </div>
+    </div>
+    <nav>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- INFORMAÇÕES PESSOAIS -->
+    <section>
+      <h2>Informações Pessoais</h2>
+      <div class="info-adicional">
+        <p><strong>Brasileiro, solteiro, 42 anos.</strong></p>
+        <p>Fonseca, Niterói – RJ</p>
+        <p>📞 (21) 99517-5856</p>
+        <p>📧 <a href="mailto:diogoadmcontabil@gmail.com">diogoadmcontabil@gmail.com</a></p>
+        <p>🌐 <a href="https://www.linkedin.com/in/diogosoriano" target="_blank">linkedin.com/in/diogosoriano</a></p>
+      </div>
+    </section>
+
+    <!-- INFORMAÇÕES ADICIONAIS -->
+    <section>
+      <h2>Informações Adicionais</h2>
+      <div class="info-adicional">
+        <p><strong>Deficiência Física:</strong> CID-10 – G80.2 (Hemiparesia à esquerda)</p>
+        <p><strong>Idiomas:</strong> Inglês intermediário</p>
+      </div>
+    </section>
+
+    <!-- FORMAÇÃO ACADÊMICA -->
+    <section>
+      <h2>Formação Acadêmica</h2>
+      <div class="formacao">
+        <ul>
+          <li>MBA em Administração de Conflitos e Gestão Empresarial – FASUL | 620h | em andamento</li>
+          <li>Pós-Graduação em Gestão Fiscal e Tributária – FAVENI | concluído em 2023</li>
+          <li>Graduação em Ciências Contábeis – UCAM | concluído em 2019</li>
+          <li>Graduação em Administração de Empresas – UCAM | concluído em 2016</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- QUALIFICAÇÕES PROFISSIONAIS -->
+    <section>
+      <h2>Qualificações Profissionais</h2>
+      <div class="qualificacoes">
+        <ul>
+          <li>Experiência em apuração de impostos diretos (IRPJ, CSLL, PIS, COFINS, ISS)</li>
+          <li>Provisões, classificações e conciliações contábeis</li>
+          <li>Atendimento a auditorias internas e externas</li>
+          <li>Análise de viabilidade financeira e controle orçamentário (CAPEX/OPEX)</li>
+          <li>Planejamento e forecast financeiro, elaboração de dashboards e KPIs</li>
+          <li>Gestão de contratos, compras e suprimentos, com foco em melhoria contínua</li>
+          <li>Domínio de ferramentas SAP, Power BI, Excel Avançado, entre outras</li>
+          <li>Vivência com metodologias ágeis (Scrum) e conhecimentos em desenvolvimento Web</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EXPERIÊNCIA PROFISSIONAL -->
+    <section>
+      <h2>Experiência Profissional</h2>
+      <div class="experiencia">
+
+        <div class="job">
+          <h3>ENEL BRASIL – ENEL GREEN POWER – WIND</h3>
+          <span>Analista de Materiais, Serviços e Gestão de Contratos | 05/2022 a 01/2024</span>
+          <ul>
+            <li>Gestão de contratos e interface com fornecedores e áreas demandantes</li>
+            <li>Planejamento de materiais e controle de forecast e produção</li>
+            <li>Participação em projetos internos de melhoria de processos e produtos</li>
+            <li>Desenvolvimento de KPIs e planos de ação para fornecedores</li>
+            <li>Liderança em negociações complexas de compras</li>
+            <li>Controle financeiro e execução de pagamentos relacionados a contratos</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <h3>BAKER HUGHES COMPANY</h3>
+          <span>Analista Financeiro | 11/2018 a 05/2022</span>
+          <ul>
+            <li>Processamento de contas a pagar e a receber</li>
+            <li>Emissão de faturamentos e controle de fluxo de caixa</li>
+            <li>Elaboração de análises financeiras e projeções econômicas</li>
+            <li>Geração de indicadores de desempenho e relatórios gerenciais</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <h3>EDITORA GLOBO S.A.</h3>
+          <span>Assistente Administrativo | 02/2020 a 04/2022</span>
+          <ul>
+            <li>Suporte ao Departamento Pessoal e RH</li>
+            <li>Gestão de contratos e convênios estudantis</li>
+            <li>Atendimento a colaboradores e orientação trabalhista</li>
+            <li>Interface com setor jurídico em processos contratuais</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <h3>RFACCOUNTS SERVIÇOS DE CONTABILIDADE</h3>
+          <span>Assistente Fiscal | 10/2018 a 02/2019</span>
+          <ul>
+            <li>Emissão e ajuste de notas fiscais (ICMS, PIS/COFINS)</li>
+            <li>Conciliação contábil e bancária</li>
+            <li>Regularização de pendências fiscais e cadastrais</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <h3>DELOITTE TOUCHE TOHMATSU</h3>
+          <span>Analista Administrativo Financeiro (06/2014 a 04/2018) | Assistente Administrativo Financeiro (11/2012 a 05/2014)</span>
+          <ul>
+            <li>Emissão de notas fiscais e controle de faturamento no SAP</li>
+            <li>Suporte à equipe de BPS na apuração de tributos (PIS, COFINS, IRPJ, CSLL, ISS)</li>
+            <li>Supervisão de equipe administrativa (viagens, reembolsos, relatórios)</li>
+            <li>Elaboração de relatórios financeiros e controle orçamentário</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CURSOS E CERTIFICAÇÕES -->
+    <section>
+      <h2>Cursos e Certificações</h2>
+      <div class="cursos">
+        <ul>
+          <li>Programador Full Stack (Java) – Senac | 320h | 2025</li>
+          <li>Metodologias Ágeis Aplicadas – Prominas | 120h | 2022</li>
+          <li>Gestão de Projetos – FAVENI | 240h | 2022</li>
+          <li>Scrum Master / Product Owner (TI) – UFF (FEST) | 80h | 2022</li>
+          <li>Linux Fundamentals, Essentials e DevOps Essentials – 4Linux | 120h | 2022</li>
+          <li>Desenvolvedor Web Front-End – SENAI / FIRJAN | 180h | 2021</li>
+          <li>Front-End (HTML, CSS, JS) – Gama Academy / Itaú | 200h | 2021</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>Entre em contato diretamente pelo WhatsApp clicando no botão abaixo:</p>
+
+      <div class="contact-buttons">
+        <a href="https://api.whatsapp.com/send?phone=5521995175856&text=Olá%20Diogo,%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços." target="_blank">
+        💬 Falar no WhatsApp
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Diogo Augusto Amaral Soriano - Todos os direitos reservados</p>
+  </footer>
+  </body>
+</html>
